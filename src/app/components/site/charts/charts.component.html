@@ -1,0 +1,109 @@
+<div class="breadcrumb-holder">
+  <div class="container-fluid">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+      <li class="breadcrumb-item active">Charts       </li>
+    </ul>
+  </div>
+</div>
+<section class="charts">
+    <div class="container-fluid">
+      <!-- Page Header-->
+      <header> 
+        <h1 class="h3 display">Charts            </h1>
+      </header>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card line-chart-example">
+            <div class="card-header d-flex align-items-center">
+              <h4>Line Chart Example</h4>
+            </div>
+            <div class="card-body">
+              <canvas
+              baseChart
+              [chartType]="'line'"
+              [datasets]="lineChartData"
+              [labels]="lineChartLabels"
+              [options]="lineChartOptions"
+              [legend]="true">
+              </canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bar-chart-example">
+            <div class="card-header d-flex align-items-center">
+              <h4>Bar Chart Example</h4>
+            </div>
+            <div class="card-body">
+              <canvas
+              baseChart
+              [chartType]="'bar'"
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="true">
+              </canvas>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card pie-chart-example">
+            <div class="card-header d-flex align-items-center">
+              <h4>Pie Chart Example</h4>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <canvas
+                baseChart
+                [chartType]="'pie'"
+                [datasets]="pieChartData"
+                [labels]="pieChartLabels"
+                [options]="pieChartOptions"
+                [legend]="true">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card polar-chart-example">
+            <div class="card-header d-flex align-items-center">
+              <h4>Polar Chart Example</h4>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <canvas
+                baseChart
+                [chartType]="'polarArea'"
+                [datasets]="polarChartData"
+                [labels]="polarChartLabels"
+                [options]="polarChartOptions"
+                [legend]="true">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="card radar-chart-example">
+            <div class="card-header d-flex align-items-center">
+              <h4>Radar Chart Example</h4>
+            </div>
+            <div class="card-body">
+              <div class="chart-container">
+                <canvas
+                baseChart
+                [chartType]="'radar'"
+                [datasets]="radarChartData"
+                [labels]="radarChartLabels"
+                [options]="radarChartOptions"
+                [legend]="true">
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
