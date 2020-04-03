@@ -1,1 +1,6 @@
 /* your styles go here */
+.search-hero {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
