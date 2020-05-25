@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ChartsModule } from 'ng2-charts';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/layout/header/header.component';
@@ -13,6 +13,9 @@ import { FormsComponent } from './components/site/forms/forms.component';
 import { LoginComponent } from './components/site/login/login.component';
 import { RegisterComponent } from './components/site/register/register.component';
 import { TablesComponent } from './components/site/tables/tables.component';
+import { CodebankComponent } from './components/site/codebank/codebank.component';
+import { HotelModule } from './components/site/hotel/hotel.module';
+import { FlightModule } from './components/site/flight/flight.module';
 
 @NgModule({
   declarations: [
@@ -25,12 +28,16 @@ import { TablesComponent } from './components/site/tables/tables.component';
     FormsComponent,
     LoginComponent,
     RegisterComponent,
-    TablesComponent
+    TablesComponent,
+    CodebankComponent
     ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
-    ChartsModule
+    ChartsModule,
+    HotelModule,
+    FlightModule
   ],
   providers: [],
   bootstrap: [AppComponent]

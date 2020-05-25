@@ -7,7 +7,10 @@ import { ChartsComponent } from './components/site/charts/charts.component';
 // import { Charts2Component } from './components/site/charts2/charts2.component';
 import { FormsComponent } from './components/site/forms/forms.component';
 import { TablesComponent } from './components/site/tables/tables.component';
-
+import { CodebankComponent } from './components/site/codebank/codebank.component';
+import { FlightListComponent } from './components/site/flight/flight-list/flight-list.component';
+import { HotelListComponent } from './components/site/hotel/hotel-list/hotel-list.component';
+import {ExtraOptions, PreloadAllModules} from '@angular/router';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -21,6 +24,9 @@ const routes: Routes = [
   { path: 'forms', component : FormsComponent},
 
   { path: 'tables', component : TablesComponent},
+  { path: 'flights', component : FlightListComponent},
+  { path: 'hotels', component : HotelListComponent},
+  { path: 'codebank', component: CodebankComponent},
 
   { path: '',
 
@@ -31,8 +37,14 @@ const routes: Routes = [
   }
 ];
 
+const APP_EXTRA_OPTIONS: ExtraOptions = {
+  preloadingStrategy: PreloadAllModules
+};
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, APP_EXTRA_OPTIONS)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
