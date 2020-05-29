@@ -27,14 +27,9 @@ const routes: Routes = [
   { path: 'flights', component : FlightListComponent},
   { path: 'hotels', component : HotelListComponent},
   { path: 'codebank', component: CodebankComponent},
+  { path: 'pokemon', loadChildren: './components/site/pokemon/pokemon.module#PokemonModule' },
 
-  { path: '',
-
-  redirectTo: '/home',
-
-  pathMatch: 'full'
-
-  }
+  { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 const APP_EXTRA_OPTIONS: ExtraOptions = {
