@@ -60,7 +60,9 @@
               </ul>
             </li>
             <!-- Log out-->
-            <li class="nav-item"><a routerLink="login" class="nav-link logout"> <span class="d-none d-sm-inline-block">Logout</span><i class="fa fa-sign-out"></i></a></li>
+            <span style="color:white">Hi {{user?.username}}</span>
+            <li class="nav-item"><span *ngIf="user==null"><a href="#" class="nav-item nav-link" (click)="login()">Login</a></span></li>
+            <li class="nav-item"><span *ngIf="user!=null"><a href="#" class="nav-item nav-link" (click)="logout()">Logout</a></span></li>
           </ul>
         </div>
       </div>

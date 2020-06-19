@@ -16,7 +16,7 @@ const usersModule = () => import('./components/site/users/users.module').then(x 
 
 const routes: Routes = [
 
-  { path: 'home', component: HomeComponent},
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
 
   { path: 'charts', component : ChartsComponent},
   // { path: 'charts2', component : Charts2Component},
@@ -25,8 +25,8 @@ const routes: Routes = [
   { path: 'tables', component : TablesComponent},
   { path: 'flights', component : FlightListComponent},
   { path: 'hotels', component : HotelListComponent},
-  { path: 'codebank', component: CodebankComponent},
-  { path: 'pokemon', loadChildren: './components/site/pokemon/pokemon.module#PokemonModule' },
+  { path: 'codebank', component: CodebankComponent, canActivate: [AuthGuard] },
+  { path: 'pokemon', loadChildren: () => import('./components/site/pokemon/pokemon.module').then(m => m.PokemonModule) },
   { path: 'users', loadChildren: usersModule, canActivate: [AuthGuard] },
   { path: 'account', loadChildren: accountModule },
 
